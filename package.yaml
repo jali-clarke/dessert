@@ -1,0 +1,31 @@
+name:                dessert
+version:             0.0.0
+github:              "jali-clarke/dessert"
+license:             BSD3
+author:              "Jinnah Ali-Clarke"
+maintainer:          "jinnah.ali-clarke@outlook.com"
+copyright:           "2019 Jinnah Ali-Clarke"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/jali-clarke/dessert#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  dessert-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - dessert
+    - hspec
+    - quickcheck
