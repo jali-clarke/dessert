@@ -10,10 +10,10 @@ module Dessert.Protocol (
     Serializing
 ) where
 
+import qualified Data.ByteString.Lazy as B
 import GHC.TypeNats
 
-import qualified Data.ByteString.Builder as B
-import qualified Data.ByteString.Lazy as B
+import Dessert.Builder
 
 data DessertProtocol = Bytes Nat
 
@@ -21,4 +21,4 @@ type family Deserializing (protocol :: DessertProtocol) (output :: *) :: * where
     Deserializing (Bytes n) a = B.ByteString -> Either String a
 
 type family Serializing (protocol :: DessertProtocol) (output :: *) :: * where
-    Serializing (Bytes n) a = a -> B.Builder
+    Serializing (Bytes n) a = a -> Builder n
