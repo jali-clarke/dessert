@@ -21,7 +21,7 @@ class Serializable a where
     type Protocol a :: DessertProtocol
 
     unpacking :: Deserializing (Protocol a) a
-    packing :: Serializing (Protocol a) a
+    packing :: Serializing a (Protocol a)
 
 deserialize :: Serializable a => B.ByteString -> Either String a
 deserialize = undefined

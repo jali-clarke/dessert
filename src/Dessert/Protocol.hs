@@ -20,5 +20,5 @@ data DessertProtocol = Bytes Nat
 type family Deserializing (protocol :: DessertProtocol) (output :: *) :: * where
     Deserializing (Bytes n) a = B.ByteString -> Either String a
 
-type family Serializing (protocol :: DessertProtocol) (output :: *) :: * where
-    Serializing (Bytes n) a = a -> Builder n
+type family Serializing (input :: *) (protocol :: DessertProtocol) :: * where
+    Serializing a (Bytes n) = a -> Builder n
