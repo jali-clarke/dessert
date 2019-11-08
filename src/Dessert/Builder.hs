@@ -13,7 +13,7 @@ import qualified Data.ByteString.Builder as B
 import Data.Word (Word8)
 import GHC.TypeNats
 
-newtype Builder (n :: Nat) = Builder B.Builder
+data Builder (n :: Nat)
 
 word8 :: Word8 -> Builder 1
-word8 = Builder . B.word8
+word8 = undefined

@@ -1,11 +1,11 @@
-module Spec.TestBytes (
+module Spec.Bytes (
     testBytes
 ) where
 
 import Test.Hspec
-import Spec.Helpers
 
 import Dessert
+import Spec.Helpers
 
 testBytes :: Spec
 testBytes = do

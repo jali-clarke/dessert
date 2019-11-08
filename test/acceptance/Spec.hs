@@ -1,10 +1,9 @@
 import Test.Hspec
 
-import Spec.TestBytes
+import Spec.Bytes
 
 acceptance :: Spec
-acceptance =
-    testBytes
+acceptance = describe "acceptance tests" testBytes
 
 main :: IO ()
-main = hspec $ describe "running acceptance tests" acceptance
+main = hspec acceptance
