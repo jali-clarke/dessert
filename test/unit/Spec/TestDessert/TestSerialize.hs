@@ -1,4 +1,4 @@
-module Spec.Dessert.TestSerialize (
+module Spec.TestDessert.TestSerialize (
     testSerialize
 ) where
 
@@ -11,4 +11,4 @@ import Spec.Helpers
 testSerialize :: Spec
 testSerialize =
     describe "Dessert.serialize" $ do
-        xit "serialize WrappedWord8 0 to bytestring singleton of 0" $ serialize (WrappedWord8 0) `shouldBe` (B.singleton 0)
+        xit "serializes WrappedWord8 0 to bytestring singleton of 0" $ serialize (WrappedWord8 0) `shouldBe` (B.singleton 0)

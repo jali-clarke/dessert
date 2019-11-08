@@ -1,12 +1,10 @@
 import Test.Hspec
 
-import Spec.Dessert.TestSerialize
+
+import Spec.TestDessert
 
 unit :: Spec
-unit =
-    describe "unit tests" $ do
-        describe "Dessert" $ do
-            testSerialize
+unit = describe "unit tests" testDessert
 
 main :: IO ()
 main = hspec unit
