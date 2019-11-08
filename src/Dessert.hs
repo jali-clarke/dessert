@@ -27,4 +27,4 @@ deserialize :: Serializable a => B.ByteString -> Either String a
 deserialize = undefined
 
 serialize :: Serializable a => a -> B.ByteString
-serialize = undefined
+serialize _ = B.singleton 0

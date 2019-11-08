@@ -11,4 +11,4 @@ import Spec.Helpers
 testSerialize :: Spec
 testSerialize =
     describe "Dessert.serialize" $ do
-        xit "serializes WrappedWord8 0 to bytestring singleton of 0" $ serialize (WrappedWord8 0) `shouldBe` (B.singleton 0)
+        it "serializes WrappedWord8 0 to bytestring singleton of 0" $ serialize (WrappedWord8 0) `shouldBe` (B.singleton 0)
