@@ -18,13 +18,29 @@ library:
   source-dirs: src
 
 tests:
-  dessert-test:
+  unit:
     main:                Spec.hs
-    source-dirs:         test
+    source-dirs:         test/unit
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -Wall
+    - -Werror
+    dependencies:
+    - dessert
+    - hspec == 2.7.1
+    - QuickCheck == 2.13.2
+
+  acceptance:
+    main:                Spec.hs
+    source-dirs:         test/acceptance
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Werror
     dependencies:
     - dessert
     - hspec == 2.7.1
