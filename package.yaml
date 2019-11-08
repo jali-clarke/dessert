@@ -27,5 +27,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - dessert
-    - hspec
-    - quickcheck
+    - hspec == 2.7.1
+    - QuickCheck == 2.13.2
