@@ -13,6 +13,7 @@ description:         Please see the README on GitHub at <https://github.com/jali
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring == 0.10.8.2
 
 library:
   source-dirs: src
@@ -20,7 +21,9 @@ library:
 tests:
   unit:
     main:                Spec.hs
-    source-dirs:         test/unit
+    source-dirs:
+    - test/helpers
+    - test/unit
     ghc-options:
     - -threaded
     - -rtsopts
@@ -30,11 +33,12 @@ tests:
     dependencies:
     - dessert
     - hspec == 2.7.1
-    - QuickCheck == 2.13.2
 
   acceptance:
     main:                Spec.hs
-    source-dirs:         test/acceptance
+    source-dirs:
+    - test/acceptance
+    - test/helpers
     ghc-options:
     - -threaded
     - -rtsopts
@@ -44,4 +48,3 @@ tests:
     dependencies:
     - dessert
     - hspec == 2.7.1
-    - QuickCheck == 2.13.2

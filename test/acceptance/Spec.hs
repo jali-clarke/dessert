@@ -1,2 +1,10 @@
+import Test.Hspec
+
+import Spec.TestBytes
+
+acceptance :: Spec
+acceptance =
+    testBytes
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = hspec $ describe "running acceptance tests" acceptance
